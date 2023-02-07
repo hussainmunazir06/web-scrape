@@ -62,9 +62,9 @@ for page in range(1, 21):
 driver.close()
 
 # save all the record to the csv file 
-# timestr = datetime.now().strftime("%Y%m%D-%H%M%S")
-# filename = timestr + '.csv'
-with open('record.csv', 'w', newline="", encoding='utf-8') as f:
+timestr = datetime.now().strftime("%Y%m%d-%H%M%S")
+filename = timestr + '.csv'
+with open(filename, 'w', newline="", encoding='utf-8') as f:
     writer = csv.writer(f)
     writer.writerow(['Product URL', 'Product Name', 'Product Price', 'Rating', 'Number of reviews'])
     writer.writerows(result)
